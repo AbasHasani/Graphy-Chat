@@ -1,0 +1,43 @@
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+.groups, .users {
+  transition: all ease 0.5s;
+}
+.users {
+  background: rgba(189, 236, 255, 0.315);
+  backdrop-filter: blur(4rem);
+}
+@media screen and (max-width: 768px){ 
+  .groups, .users {
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+  }
+  .groups-open, .users-open { 
+    top: 0;
+  }
+  // .users-open {
+  //   top: 0
+  // }
+}
+
+// .users-open {
+//   top: 0
+// }
