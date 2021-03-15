@@ -7,14 +7,14 @@ import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 import { WebSocketLink } from '@apollo/client/link/ws';
 import ws from "ws";
 const link = process.browser ?  new WebSocketLink({
-  uri: 'ws://chat-graphy.herokuapp.com/',
+  uri: 'wss://graphy-chat.herokuapp.com/',
   options: {
     reconnect: true
   }
 }): null;
 const client = new ApolloClient({
   link,
-  uri: "https://chat-graphy.herokuapp.com/",
+  uri: "https://graphy-chat.herokuapp.com/",
   cache: new InMemoryCache(),
 });
 
